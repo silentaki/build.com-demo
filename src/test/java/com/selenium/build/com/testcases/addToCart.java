@@ -25,8 +25,11 @@ public class addToCart extends baseTest{
 		navigate("build.com_url");
 		//add item 
 		test.log(LogStatus.INFO, "add the first item : Kohler K 6626 6U");
+		Thread.sleep(2000);
 		type("searchTextBox_xpath","Item1");
+		Thread.sleep(2000);
 		click("searchBtnClick_xpath");
+		Thread.sleep(2000);
 		click("img1_xpath");
 		Thread.sleep(2000);
 		click("addToCart_xpath");
