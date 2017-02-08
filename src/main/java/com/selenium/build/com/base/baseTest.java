@@ -14,6 +14,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -39,9 +40,9 @@ public class baseTest {
 	 }
 	 //Browser properties
 			public void openBrowser() throws Exception{
-				driver = new FirefoxDriver();
-			  //System.setProperty("webdriver.chrome.driver", "E:\\selenium\\chrome_Driver\\chromedriver.exe");
-				//driver = new ChromeDriver();
+				//driver = new FirefoxDriver();
+			 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//chromedriver.exe");
+				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);			
 			}
