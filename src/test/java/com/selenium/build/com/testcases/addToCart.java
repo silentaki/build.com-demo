@@ -28,26 +28,39 @@ public class addToCart extends baseTest{
 		type("searchTextBox_xpath","Item1");
 		click("searchBtnClick_xpath");
 		click("img1_xpath");
+		Thread.sleep(2000);
 		click("addToCart_xpath");
+		Thread.sleep(2000);
 		
 		//add item
 		test.log(LogStatus.INFO, "add the second item : Kohler K 6626 6U");
 		type("searchTextBox_xpath","Item2");
+		Thread.sleep(2000);
 		click("searchBtnClick_xpath");
+		Thread.sleep(2000);
 		click("img1_xpath");
+		Thread.sleep(2000);
 		click("addToCart_xpath");
+		Thread.sleep(2000);
 		
 		//add item
 		test.log(LogStatus.INFO, "add the first item : Kohler K-5180-ST");
 		type("searchTextBox_xpath","Item3");
+		Thread.sleep(2000);
 		click("searchBtnClick_xpath");
+		Thread.sleep(2000);
 		click("selectValue_xpath");
+		Thread.sleep(2000);
 		clearText("selectValue_xpath");
+		Thread.sleep(2000);
 		type("selectValue_xpath","value");
 		Thread.sleep(2000);
 		selectText("selectValue_xpath");
+		Thread.sleep(2000);
 		click("addToCart_xpath");
+		Thread.sleep(2000);
 		click("cart_xpath");
+		Thread.sleep(2000);
 		
 		//check out
 		
@@ -97,7 +110,7 @@ public class addToCart extends baseTest{
 		}
 		//To check Grand Total
 		try{
-		String actual_result_GrandTotal = "$1,250.44";
+		String actual_result_GrandTotal = "$$1,287.38";
 		String Expected_result_GrandTotal = driver.findElement(By.xpath("//*[@id='grandtotalamount']")).getText();
 		System.out.println(Expected_result_GrandTotal);
 		assertThat(actual_result_GrandTotal).isEqualToIgnoringCase(Expected_result_GrandTotal);
