@@ -44,6 +44,7 @@ public class addToCart extends baseTest{
 		click("selectValue_xpath");
 		clearText("selectValue_xpath");
 		type("selectValue_xpath","value");
+		Thread.sleep(2000);
 		selectText("selectValue_xpath");
 		click("addToCart_xpath");
 		click("cart_xpath");
@@ -52,6 +53,7 @@ public class addToCart extends baseTest{
 		
 		test.log(LogStatus.INFO, "check out the items");
 		click("checkout_xpath");
+		Thread.sleep(7000);
 		test.log(LogStatus.INFO, "check out as guest");
 		click("checkout_as_guest_xpath");				
 		
