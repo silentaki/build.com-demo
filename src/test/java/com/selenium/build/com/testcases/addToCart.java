@@ -110,7 +110,7 @@ public class addToCart extends baseTest{
 		}
 		//To check Grand Total
 		try{
-		String actual_result_GrandTotal = "$$1,287.38";
+		String actual_result_GrandTotal = "$1,287.38";
 		String Expected_result_GrandTotal = driver.findElement(By.xpath("//*[@id='grandtotalamount']")).getText();
 		System.out.println(Expected_result_GrandTotal);
 		assertThat(actual_result_GrandTotal).isEqualToIgnoringCase(Expected_result_GrandTotal);
